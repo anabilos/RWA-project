@@ -3,6 +3,26 @@
 @section('title')
     Edit-Registered
 @endsection
+@section('nav')
+<div class="li">
+<a class="btn-link"href="{{ url('/admin') }}">
+    Dashboard
+</a>
+
+<a class="btn-link"href="{{ url('/role-register') }}">
+    Korisnici
+</a>
+<a class="btn-link"href="{{route('product.index')}}">
+    Proizvodi
+</a>
+<a class="btn-link"href="{{route('product.dodaj')}}">
+    Dodaj proizvod
+</a>
+<a class="btn-link"href="{{ url('/orders') }}">
+    Narudžbe
+</a>
+</div>
+@endsection
 
 @section('content')
 <div class="container">

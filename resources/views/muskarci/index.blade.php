@@ -26,12 +26,12 @@
                      <div class="col-lg-12">
                          <div class="categories-filter">
                            <div class="cf-right">
-                               <span style="color:black;">Sort by:</span>
+                               <span style="color:black;">Sortiraj:</span>
 
-                               <a href="{{route('muskarci.index',['category'=>request()->category, 'sort'=>'high_low'])}}">High to low price</a><span>|</span>
-                               <a href="{{route('muskarci.index',['category'=>request()->category, 'sort'=>'low_high'])}}">Low to high price</a>
+                               <a href="{{route('muskarci.index',['category'=>request()->category, 'sort'=>'high_low'])}}">Cijena silazno</a><span>|</span>
+                               <a href="{{route('muskarci.index',['category'=>request()->category, 'sort'=>'low_high'])}}">Cijena uzlazno</a>
                                <span>|</span>
-                               <a href="{{route('muskarci.index',['category'=>request()->category, 'sort'=>'alphabet'])}}">Alphabetical order</a>
+                               <a href="{{route('muskarci.index',['category'=>request()->category, 'sort'=>'alphabet'])}}">Abecedni red</a>
 
 
                            </div>
@@ -102,9 +102,9 @@
                                             <a href="{{ route('shop.show',$product->id) }}">
                                                 <h4 style="color:#838383">{{$product->name}}</h4><br/>
                                             </a>
-                                            <p>{{$product->price}} KM</p><br/><button type="submit" class="btn btn-secondary">
+                                            <p>{{$product->price}} KM</p><br/><a  class="btn btn-secondary" href="{{ route('shop.show',$product->id) }}">
                                             Naruči
-                                          </button>
+                                          </a>
                                         </div>
                                     </div>
                                 </div>

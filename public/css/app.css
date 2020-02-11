@@ -395,6 +395,8 @@ h6,
   line-height: 1.2;
 }
 
+
+
 h1,
 .h1 {
   font-size: 2.25rem;
@@ -586,6 +588,17 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  height: 50px;
+}
+.container .li{
+  margin-left: 30px;
+
+}
+
+.container .li a{
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 60px;
 }
 
 @media (min-width: 576px) {
@@ -626,7 +639,9 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+
 }
+
 
 .no-gutters {
   margin-right: 0;
@@ -5006,6 +5021,7 @@ input[type=button].btn-block {
   border-radius: 0.25rem;
   margin:auto;
   width:70%;
+
 }
 
 .card > hr {
@@ -5026,11 +5042,19 @@ input[type=button].btn-block {
 .card-body {
   -webkit-box-flex: 1;
           flex: 1 1 auto;
-  padding: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  text-align: center;
+}
+.card-body h3{
+
+  margin-top: 20px;
 }
 
 .card-title {
   margin-bottom: 0.75rem;
+  margin-top: 10px;
 
 }
 
@@ -5060,6 +5084,7 @@ input[type=button].btn-block {
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   text-align: center;
+
 }
 
 .card-header:first-child {

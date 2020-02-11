@@ -72,13 +72,31 @@
 
                         </div>
                         <p>{{$product->description}}</p>
+                        <div class="shipping-info">
+                          <h6 >Veličina:</h6></br>
+                          <div class="chose-shipping">
+                              <div class="cs-item">
+                                <form action="{{route('cart.store')}}" method="POST">
+                                  {{ csrf_field() }}
+                                  <select  name="size">
+                                     @foreach($product->sizes as $size)
+                                    <option value="{{$size->name}}">{{$size->name}}</option>
+                                      @endforeach
+                                    </select>
 
-                        <div class="product-quantity">
-                         <div class="pro-qty">
-                             <input type="text" value="1">
-                         </div>
-                     </div>
-                        <a href="#" class="primary-btn pc-btn">Add to cart</a>
+
+                              </div>
+
+                          </div>
+
+                      </div>
+
+                       <input type="hidden" name="id" value="{{$product->id}}">
+                    
+                       <input type="hidden" name="name" value="{{$product->name}}">
+                       <input type="hidden" name="price" value="{{$product->price}}">
+                   <button style="cursor:pointer"type="submit" class="primary-btn pc-btn">Dodaj u košaricu</button>
+                   </form>
 
                     </div>
                 </div>

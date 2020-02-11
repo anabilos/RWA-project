@@ -3,18 +3,52 @@
 @section('title')
     Registered Role
 @endsection
+@section('nav')
+<div class="li">
+<a class="btn-link"href="{{ url('/admin') }}">
+    Dashboard
+</a>
+
+<a class="btn-link"href="{{ url('/role-register') }}">
+    Korisnici
+</a>
+<a class="btn-link"href="{{route('product.index')}}">
+    Proizvodi
+</a>
+<a class="btn-link"href="{{route('product.dodaj')}}">
+    Dodaj proizvod
+</a>
+<a class="btn-link"href="{{ url('/orders') }}">
+    Narudžbe
+</a>
+</div>
+@endsection
 
 @section('content')
 <div class="row">
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
+              @if (session()->has('success_message'))
+                   <div class="spacer"></div>
+                   <div class="alert alert-success">
+                       {{ session()->get('success_message') }}
+                   </div>
+               @endif
+
+               @if(count($errors) > 0)
+                   <div class="spacer"></div>
+                   <div class="alert alert-danger">
+                       <ul>
+                           @foreach ($errors->all() as $error)
+                               <li>{!! $error !!}</li>
+                           @endforeach
+                       </ul>
+                   </div>
+               @endif
               <h4 class="card-title"> Registrirane Role</h4>
-              @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+
+
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -65,16 +99,4 @@
 
 @section('scripts')
 
-@endsection
-@section('nav')
-<a class="btn-link"href="{{ url('/admin') }}">
-    Dashboard
-</a>
-
-<a class="btn-link"href="{{ url('/role-register') }}">
-    Manage Users
-</a>
-<a class="btn-link"href="#">
-    Manage Products
-</a>
 @endsection

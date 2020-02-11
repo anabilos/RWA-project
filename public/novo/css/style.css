@@ -535,7 +535,7 @@ ol {
 	display: inline-block;
 	height: 68px;
 	width: 68px;
-	background: #363636;;
+	background: #363636;
 	font-size: 35px;
 	color: white;
 	border-radius: 50%;
@@ -1199,7 +1199,7 @@ ol {
 	position: absolute;
 	left: 0;
 	bottom: -2px;
-	width: 110px;
+	width: 85px;
 	height: 2px;
 	background: #000000;
 	content: "";
@@ -1363,6 +1363,7 @@ ol {
 .product-content .pc-meta {
 	margin-bottom: 35px;
 }
+
 
 .product-content .pc-meta h5 {
 	color: #1e1e1e;
@@ -2074,6 +2075,15 @@ ol {
 .map iframe {
 	width: 100%;
 }
+a button{
+	cursor: pointer;
+		background-color: white;
+}
+a button:hover{
+
+	background-color: lightgrey;
+}
+
 
 /* ---------------------------------- Responsive Media Styles ---------------------------------*/
 
@@ -2085,6 +2095,14 @@ ol {
 	.inner-header .main-menu {
 		float: right;
 		margin-right: 238px;
+	}
+	a button{
+		background-color: lightgrey;
+		color: black;
+	}
+	a button:hover{
+
+		background-color: white;
 	}
 }
 
@@ -2101,6 +2119,14 @@ ol {
 		color: white;
 		border: 2px solid white;
 
+	}
+	a button{
+		background-color: grey;
+		color: black;
+	}
+	a button:hover{
+
+		background-color: lightgrey;
 	}
 
 	.single-slider-item .row{
@@ -2142,6 +2168,14 @@ ol {
 		color: white;
 		border: 2px solid white;
 
+	}
+	a button{
+		background-color: grey;
+		color: black;
+	}
+	a button:hover{
+
+		background-color: lightgrey;
 	}
 
 	.single-slider-item h1 {
@@ -2287,6 +2321,14 @@ ol {
 	.inner-header {
 		overflow: hidden;
 	}
+	a button{
+		background-color: grey;
+		color: black;
+	}
+	a button:hover{
+
+		background-color: lightgrey;
+	}
 	.inner-header .user-access {
 		margin-right: 10px;
 	}
@@ -2405,6 +2447,7 @@ ol {
 
 
 	}
+
 	.primary-btn {
 		color: white;
 		border: 2px solid white;
@@ -2423,6 +2466,14 @@ ol {
 	.slicknav_menu {
 		display: block;
 		margin-top: 10px;
+	}
+	a button{
+		background-color: grey;
+		color: black;
+	}
+	a button:hover{
+
+		background-color: lightgrey;
 	}
 	.inner-header .header-right {
 		margin-right: 20px;
@@ -2545,12 +2596,21 @@ ol {
 		border: 2px solid white;
 
 	}
+
 	.inner-header .header-right {
 		margin-right: 0;
 	}
 	.features-box .single-box-item.first-box .box-text {
 		right: 9px;
 		top: 7px;
+	}
+	a button{
+		background-color: grey;
+		color: black;
+	}
+	a button:hover{
+
+		background-color: lightgrey;
 	}
 	.features-box .single-box-item .box-text h2 {
 		font-size: 40px;
@@ -2585,7 +2645,9 @@ ol {
 	.social-links a {
 		margin-right: 10px;
 	}
+
 	.product-content .product-quantity {
+
 		margin-bottom: 15px;
 	}
 	.cart-btn .coupon-input input {

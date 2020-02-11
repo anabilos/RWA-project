@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
+use App\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,9 +25,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-      
-        return view('home');
+      $productsz=Product::where('gender_id','=',1)->inRandomOrder()->take(2)->get();
+      $productsm=Product::where('gender_id','=',2)->inRandomOrder()->take(2)->get();
+
+
+          return view('home');->with([
+
+          'productsz'=>$productsz,
+          'productsm'=>$productsm,
+
+        ]);
     }
 
-    
+
 }

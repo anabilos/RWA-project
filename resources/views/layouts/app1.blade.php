@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
 
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap"
@@ -44,14 +45,14 @@
         <div class="container-fluid">
             <div class="inner-header">
                 <div class="logo" height="70px">
-                    <a href="#"><img height="50px" width="70px"src="/img/logo.png" alt=""></a>
+
                 </div>
                 <div class="header-right">
-                    <img src="novo/img/icons/search.png" alt="" class="search-trigger">
-                    <img src="novo/img/icons/man.png" alt="">
-                    <a href="#">
+
+
+                    <a href="{{ route('cart.index') }}">
                         <img src="novo/img/icons/bag.png" alt="">
-                        <span>2</span>
+                        <span>{{Cart::instance('default')->count()}}</span>
                     </a>
                 </div>
 
@@ -88,8 +89,8 @@
                         <li><a class="active" href="{{ url('/') }}">AB-Shop</a></li>
                         <li><a href="{{ route('zene.index') }}">Žene</a></li>
                         <li><a href="{{ route('muskarci.index') }}">Muškarci</a></li>
-                        <li><a href="#">O nama</a></li>
-                        <li><a href="#">Vizija</a></li>
+                        <li><a href="{{route('about')}}">O nama</a></li>
+                        <li><a href="{{asset('vizija.pdf')}}">Vizija</a></li>
                     </ul>
                 </nav>
             </div>
@@ -104,13 +105,12 @@
                   <div class="row" >
                       <div class="col-lg-3 col-sm-6">
                           <div class="single-footer-widget">
-                              <h4>About us</h4>
+                              <h4>O nama</h4>
                               <ul>
-                                  <li>About Us</li>
-                                  <li>Community</li>
-                                  <li>Jobs</li>
-                                  <li>Shipping</li>
-                                  <li>Contact Us</li>
+                                  <li>O nama</li>
+                                  <li>Vizija</li>
+                                  <li>Men products</li>
+                                  <li>Women products</li>
                               </ul>
                           </div>
                       </div>
@@ -135,16 +135,7 @@
       </footer>
 
 
-
-           <script src="{{ asset('novo/js/jquery-3.3.1.min.js') }}"></script>
-           <script src="{{ asset('novo/js/bootstrap.min.js') }}"></script>
-           <script src="{{ asset('novo/js/jquery.magnific-popup.min.js') }}"></script>
-           <script src="{{ asset('novo/js/jquery.slicknav.js') }}"></script>
-           <script src="{{ asset('novo/js/owl.carousel.min.js') }}"></script>
-           <script src="{{ asset('novo/js/jquery.nice-select.min.js') }}"></script>
-           <script src="{{ asset('novo/js/mixitup.min.js') }}"></script>
-           <script src="{{ asset('novo/js/main.js') }}"></script>
-
+@yield('script')
 
 
 </body>
