@@ -51,7 +51,7 @@ class DashboardController extends Controller
     public function registerdelete(Request $request, $id){
         $users=User::findOrFail($id);
         $users->delete();
-        return redirect('/orders')->with('success_message','Vaša baza je uspješno izbrisana!');
+        return redirect('/role-register')->with('success_message','Vaša baza je uspješno izbrisana!');
 }
 public function ordersdelete(Request $request, $id){
     $orders=Order::findOrFail($id);

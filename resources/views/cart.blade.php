@@ -154,7 +154,7 @@
 
 
 @endsection
-@section('script')
+@section('scriptt')
     <script src="{{ asset('js/app.js') }}"></script>
 
     <script>
@@ -180,3 +180,5 @@
 
 
 @endsection
+
+

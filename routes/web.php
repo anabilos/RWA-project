@@ -10,38 +10,29 @@ use  Gloudemans\Shoppingcart\Facades\Cart;
 | contains the "web" middleware group. Now create something great!
 |
 */
- URL::forceRootUrl('https://studenti.sum.ba/projekti/fsre/YYYY/gX');
+ URL::forceRootUrl('https://studenti.sum.ba/projekti/fsre/2019/g10');
+Auth::routes();
+
+
+
 
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Auth::routes();
-
 Route::get('/home', function () {
     return view('home');
 });
+ Route::get('/about', function () {
+ return view('about'); })->name('about');
+
 Route::get('/create', function () {
     return view('admin.product.dodaj');
 })->name('product.dodaj');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-
-
-
-
 Route::get('/shop/{id}','ProductController@show')->name('shop.show');
 Route::get('/zene','Zene\ZeneController@index')->name('zene.index');
-Route::get('/cart','CartController@index')->name('cart.index');
 
-Route::post('/cart','CartController@store')->name('cart.store');
-Route::get('empty',function(){
-  Cart::destroy();
-});
-Route::patch('/cart/{product}', 'CartController@update')->name('cart.update');
-Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
 
 Route::get('/muskarci','Muskarci\MuskarciController@index')->name('muskarci.index');
 
@@ -68,6 +59,15 @@ Route::group(['middleware' =>['auth', 'admin']], function(){
 
 });
 Route::group(['middleware' =>'auth'], function(){
+	Route::get('/cart','CartController@index')->name('cart.index');
+
+Route::post('/cart','CartController@store')->name('cart.store');
+Route::get('empty',function(){
+  Cart::destroy();
+});
+Route::patch('/cart/{product}', 'CartController@update')->name('cart.update');
+Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
+
   Route::get('/checkout','CheckoutController@index')->name('checkout.index');
   Route::post('/checkout','CheckoutController@store')->name('checkout.store');
   Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.index');

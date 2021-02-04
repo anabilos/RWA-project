@@ -8,9 +8,10 @@
                        <div class="col-lg-12">
                           <img src="images/thank.jpg"alt="">
 
-                           <a href="{{route('home')}}" class="primary-btn pc-btn kraj" >Home Page</a>
+                           <a href="{{url('/home')}}" class="primary-btn pc-btn kraj" >Home Page</a>
                        </div>
                    </div>
                </div>
 
 @endsection
+

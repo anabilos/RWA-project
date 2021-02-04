@@ -69,7 +69,7 @@
                                 @endif
 
                             @else
-                            <a  href="{{ url('/admin') }}">
+			  <a  href="{{ url('/admin') }}">
                                     {{ Auth::user()->name }}
                                     {{ Auth::user()->surname }}
 
@@ -82,11 +82,12 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
+                                 
                                 @endguest
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
-                        <li><a class="active" href="{{ url('/') }}">AB-Shop</a></li>
+                        <li><a class="active" href="{{ url('/home') }}">AB-Shop</a></li>
                         <li><a href="{{ route('zene.index') }}">Žene</a></li>
                         <li><a href="{{ route('muskarci.index') }}">Muškarci</a></li>
                         <li><a href="{{route('about')}}">O nama</a></li>
@@ -134,8 +135,15 @@
           </div>
       </footer>
 
-
-@yield('script')
+@yield('scriptt')
+  <script src="novo/js/jquery-3.3.1.min.js"></script>
+    <script src="novo/js/bootstrap.min.js"></script>
+    <script src="novo/js/jquery.magnific-popup.min.js"></script>
+    <script src="novo/js/jquery.slicknav.js"></script>
+    <script src="novo/js/owl.carousel.min.js"></script>
+    <script src="novo/js/jquery.nice-select.min.js"></script>
+    <script src="novo/js/mixitup.min.js"></script>
+    <script src="novo/js/main.js"></script>
 
 
 </body>

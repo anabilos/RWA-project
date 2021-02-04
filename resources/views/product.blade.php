@@ -13,7 +13,7 @@
                                    <div class="cf-left">
 
 
-                                       <a href="{{ route('home') }} " style="color:black;font-size:90%">Home</a><span>></span>
+                                       <a href="{{ url('/home') }} " style="color:black;font-size:90%">Home</a><span>></span>
                                        @if($product->gender_id==1)
                                        <a href="{{ route('zene.index') }} " style="color:black;font-size:90%">Back</a><span>></span>
                                        @elseif($product->gender_id==2)

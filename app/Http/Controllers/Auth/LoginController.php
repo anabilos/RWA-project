@@ -32,11 +32,16 @@ class LoginController extends Controller
         return 'admin';
     }
         else{
-            return '/';
+            return '/home';
 
         }
        
     }
+
+	public function logout(){
+	Auth::logout();
+	return redirect()->to('/home');
+}
     
 
     /**

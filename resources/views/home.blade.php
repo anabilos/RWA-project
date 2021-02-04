@@ -39,14 +39,6 @@
 
 @endsection
 
+  
+   
 
-      @section('script')
-    <script src="novo/js/jquery-3.3.1.min.js"></script>
-    <script src="novo/js/bootstrap.min.js"></script>
-    <script src="novo/js/jquery.magnific-popup.min.js"></script>
-    <script src="novo/js/jquery.slicknav.js"></script>
-    <script src="novo/js/owl.carousel.min.js"></script>
-    <script src="novo/js/jquery.nice-select.min.js"></script>
-    <script src="novo/js/mixitup.min.js"></script>
-    <script src="novo/js/main.js"></script>
-    @endsection

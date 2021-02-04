@@ -71,14 +71,14 @@
                                   <a href="{{ route('shop.show',$product->id) }}">
                                       <h4 style="color:#838383">{{$product->name}}</h4><br/>
                                   </a>
-                                  <p>{{$product->price}} KM</p><br/><button type="submit" class="btn btn-secondary">
+                                  <p>{{$product->price}} KM</p><br/><a  class="btn btn-secondary" href="{{ route('shop.show',$product->id) }}">
                                   Naruči
-                                </button>
+                                </a>
                               </div>
                           </div>
                       </div>
 
-                       @if(($br-1)!=count($products)-1)
+                       @if(($br-1)!=count((array)$products)-1)
                       <div class="col-lg-6 col-md-6">
                             <div class="row">
                               @endif
@@ -120,14 +120,16 @@
                           </div>
                         </div>
                             @endif
-                            {{$products->appends(request()->input())->links()}}
+                            
 
+					
 
-
-                                              </div>
-                                            </div>
+	{!! str_replace('/studenti.sum.ba', 'studenti.sum.ba/projekti/fsre/2019/g10', $products->appends(request()->input())->links()) !!}
+                      
+</div></div></div>                                            </div>
                                               <br/><br/><br/><br/>
 
 
 
  @endsection
+

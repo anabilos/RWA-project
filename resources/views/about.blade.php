@@ -2,9 +2,9 @@
 @section('content')
 <br/><br/><br/>
 <section class="lookbok-section" >
-  <div class="container-fluid">
-      <div class="row" style="margin-left:80px;width:100%" >
-          <div class="col-lg-4 offset-lg-1">
+  <div class="container">
+      <div class="row" style="align-items:center;width:100%" >
+          <div class="col-lg-5" style="margin-left:50px">
               <div class="lookbok-left"  style="padding:0px">
                   <div class="section-title">
                       <h2>AB-shop <br />#about</h2>
@@ -20,7 +20,7 @@
                   
               </div>
           </div>
-          <div class="col-lg-4 offset-lg-1" >
+          <div class="col-lg-5" style="margin-left:50px"  >
             <div class="single-box-item first-box"style="margin-right:25px">
                 <img  src="images/prva.jpg" alt="">
                 <div class="box-text">
